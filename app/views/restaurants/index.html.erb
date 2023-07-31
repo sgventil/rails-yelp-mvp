@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <h1 class="text-center fs-2 mt-4">Restaurant List</h1>
+  <hr class="w-75 mx-auto">
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <% @restaurants.each do |restaurant|%>
+        <div class="card mb-5 shadow p-3 rounded" style="background-color:rgb(253, 238, 227);">
+          <%= link_to restaurant.name, restaurant_path(restaurant), class: "text-dark fw-bold fs-4 px-3 py-3 text-decoration-none" %>
+          <p class="px-3 py-3 text-end fst-italic"><%= restaurant.category.capitalize %> Food</p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

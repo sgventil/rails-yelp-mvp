@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <h1 class="text-center fs-2 mt-4">Restaurants</h1>
+  <hr class="w-75 mx-auto">
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+        <div class="card mb-3 shadow p-3 rounded" style="background-color:rgb(253, 238, 227);">
+          <h2 class="text-dark fw-bold fs-4 px-3 py-3 text-center"><%= @restaurant.name %></h2>
+          </ul>
+            <li class="px-4 py-2">
+              <span class="text-dark"><%= @restaurant.address%></span>
+              <i class="fas fa-map-marker-alt text-dark px-3"></i>
+            </li>
+            <li class="px-4 py-2">
+              <span class="text-dark fst-italic fw-bold">(<%= @restaurant.phone_number %>)</span>
+              <i class="fas fa-phone text-dark px-3"></i>
+            </li>
+             <%# <li class="px-4 py-2"> %>
+              <%# <span class="text-dark fst-italic fw-bold">(<%= @restaurant.review %>)</span> %>
+              <%# <i class="fas fa-phone text-dark px-3"></i> %>
+            <%# </li> %>
+          </ul>
+          <p class="px-3 py-3 text-end fst-italic"><%= @restaurant.category.capitalize %> Food</p>
+        </div>
+    </div>
+  </div>
+</div>

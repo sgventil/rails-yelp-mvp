@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <h1 class="text-center fs-2">New Restaurant</h1>
+  <hr class="w-75 mx-auto">
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <%= simple_form_for(@restaurant) do |f| %>
+      <div class="mb-3">
+        <%= f.input :name, class: "form-control" %>
+      </div>
+      <div class="mb-3">
+        <%= f.input :address, class: "form-control" %>
+      </div>
+      <div class="mb-3">
+        <%= f.input :phone_number, class: "form-control" %>
+      </div>
+      <div class="mb-3">
+        <%= f.input :category, class: "form-control" %>
+      </div>
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
