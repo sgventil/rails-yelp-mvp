@@ -3,14 +3,14 @@
   <hr class="w-75 mx-auto">
   <div class="row justify-content-md-center">
     <div class="col-md-6">
-      <%= simple_form_for(:review) do |f| %>
+      <%= simple_form_for [@restaurant, @review] do |f| %>
       <div class="mb-3">
         <%= f.input :content, class: "form-control" %>
       </div>
       <div class="mb-3">
         <%= f.input :rating, class: "form-control" %>
       </div>
-      <%= f.button :submit %>
+      <%= f.submit %>
       <% end %>
     </div>
   </div>
