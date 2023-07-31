@@ -3,21 +3,9 @@
   <hr class="w-75 mx-auto">
   <div class="row justify-content-md-center">
     <div class="col-md-6">
-      <%= simple_form_for(@restaurant) do |f| %>
-      <div class="mb-3">
-        <%= f.input :name, class: "form-control" %>
+      <div class="card mb-3 shadow p-3 rounded" style="background-color:rgb(255, 85, 187);">
+        <%= render "form", restaurant: @restaurant %>
       </div>
-      <div class="mb-3">
-        <%= f.input :address, class: "form-control" %>
-      </div>
-      <div class="mb-3">
-        <%= f.input :phone_number, class: "form-control" %>
-      </div>
-      <div class="mb-3">
-        <%= f.input :category, class: "form-control" %>
-      </div>
-      <%= f.submit %>
-      <% end %>
     </div>
   </div>
 </div>

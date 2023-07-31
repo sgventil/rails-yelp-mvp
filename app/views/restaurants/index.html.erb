@@ -4,10 +4,12 @@
   <div class="row justify-content-md-center">
     <div class="col-md-6">
       <% @restaurants.each do |restaurant|%>
-        <div class="card mb-5 shadow p-3 rounded" style="background-color:rgb(253, 238, 227);">
-          <%= link_to restaurant.name, restaurant_path(restaurant), class: "text-dark fw-bold fs-4 px-3 py-3 text-decoration-none" %>
-          <p class="px-3 py-3 text-end fst-italic"><%= restaurant.category.capitalize %> Food</p>
-        </div>
+        <%= link_to restaurant_path(restaurant), style: "text-decoration: none;" do %>
+          <div class="card mb-5 shadow rounded p-3" style="background-color:rgb(255, 85, 187);">
+            <h2 class="text-dark fw-bold fs-4 py-3">"<%=restaurant.name %>"</h2>
+            <p class="px-3 text-end fst-italic text-dark fs-5"><%= restaurant.category.capitalize %> Food</p>
+          </div>
+          <% end %>
       <% end %>
     </div>
   </div>

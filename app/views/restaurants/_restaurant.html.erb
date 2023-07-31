@@ -1,0 +1,16 @@
+<div id="<%= dom_id restaurant %>">
+  <div class="card mb-3 shadow p-3 rounded" style="background-color:rgb(255, 85, 187);">
+  <h2 class="text-dark fw-bold fs-4 px-3 text-center">"<%= @restaurant.name %>"</h2>
+    <ul style="list-style: none;">
+      <li class="py-2">
+        <i class="fas fa-map-marker-alt text-dark px-1"></i>
+        <span class="text-dark"><%= @restaurant.address%></span>
+      </li>
+      <li class="py-2">
+        <i class="fas fa-phone text-dark px-1"></i>
+        <span class="text-dark fst-italic fw-bold">(<%= @restaurant.phone_number %>)</span>
+      </li>
+    </ul>
+    <p class="text-end mb-0 fs-5 fst-italic"><%= @restaurant.category.capitalize %> Food</p>
+  </div>
+</div>

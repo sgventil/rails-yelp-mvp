@@ -1,0 +1,13 @@
+<div id="<%= dom_id review %>">
+  <div class="card mb-3 shadow p-3 rounded" style="background-color:rgb(255, 85, 187);">
+  <h2 class="text-start fs-5">Reviews:</h2>
+    <% @restaurant.reviews.each do |review| %>
+      <span class="text-dark fst-italic"><%= review.content.capitalize! %></span>
+      <div class="d-flex">
+        <% review.rating.times do %>
+          <i class="fas fa-star" style="color: rgb(254, 255, 134);"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+        <%= simple_form_for(@restaurant) do |f| %>
+        <div class="mb-3">
+          <%= f.input :name, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.input :address, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.input :phone_number, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.input :category, class: "form-control" %>
+        </div>
+        <%= f.submit class: "btn shadow rounded", style: "background-color:rgb(182, 234, 250)" %>
+        <% end %>
